@@ -1,0 +1,634 @@
+.burger, .menu
+  display: none
+.header--lang
+   position: relative
+   display: flex
+   align-items: center
+   @media( max-width: 992px )
+      justify-content: center
+.main_menu
+   position: relative
+   display: flex
+   height: 100px
+   &--item
+      display: flex
+      align-items: center
+      padding: 0 20px
+   &--lnk
+      transition: color .2s
+   &--close_button
+      display: none
+.main_submenu
+   position: relative
+   cursor: pointer
+   &--icon
+      position: absolute
+      top: calc(50% - 29px)
+      right: 47px
+      width: 51px
+      height: 50px
+      transform: rotate(0)
+      transform-origin: 50% 50% 0
+      transition: transform, stroke
+      img 
+         width: 100%
+         height: 100%
+         object-fit: cover
+   &--list
+      display: flex
+      flex-direction: column
+      position: absolute
+      left: 50%
+      top: 90px
+      padding: 20px 10px
+      width: auto
+      max-width: none
+      transition: transform .2s, opacity .2s
+      z-index: 100
+      background: #FFFFFF
+      border: 1px solid #EBEBEB
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05)
+      border-radius: 5px
+      @media( min-width: 1001px )
+         transform: translateX(-50%) translateY(150px)
+         opacity: 0
+         visibility: hidden
+   &--subitem
+      transition: transform .1s
+      display: flex
+      align-items: center
+      @media( min-width: 1001px )
+         transform: rotateX(90deg)
+      .nav__flag 
+         margin-right: 0
+   &--lnk
+      display: block
+      padding: 15px 10px 15px 20px
+      white-space: nowrap
+      transition: color .2s
+      font-weight: 400
+      font-size: 13px
+      color: #04152B
+      &-padding_equal
+         padding: 10px
+   &:hover
+      @media( min-width: 1001px )                                  // раскрытие подпунктов меню в PC версии (до 1001px)
+         .main_submenu--list
+            transform: translateX(-50%) translateY(-11%)
+            opacity: 1
+            visibility: hidden
+         .main_submenu--subitem
+            transform: rotateX(0)
+            opacity: 1
+            transition-delay: .8s
+            &:nth-child(1)
+               transition-delay: .05s
+            &:nth-child(2)
+               transition-delay: .1s
+            &:nth-child(3)
+               transition-delay: .15s
+            &:nth-child(4)
+               transition-delay: .2s
+            &:nth-child(5)
+               transition-delay: .25s
+            &:nth-child(6)
+               transition-delay: .3s
+            &:nth-child(7)
+               transition-delay: .35s
+            &:nth-child(8)
+               transition-delay: .4s
+            &:nth-child(9)
+               transition-delay: .45s
+            &:nth-child(10)
+               transition-delay: .5s
+            &:nth-child(11)
+               transition-delay: .55s
+            &:nth-child(12)
+               transition-delay: .6s
+            &:nth-child(13)
+               transition-delay: .65s
+            &:nth-child(14)
+               transition-delay: .7s
+            &:nth-child(15)
+               transition-delay: .75s
+.lang_select
+   position: relative
+   display: flex
+   align-items: center
+   justify-content: center
+   height: 150px
+   background: url(/img/connect.png) no-repeat center center
+   width: 640px
+   padding-bottom: 6px
+   &--selected
+      display: flex
+      align-items: center
+      cursor: pointer
+      transition: color 0.5s
+      font-size: 72px
+      color: white 
+      line-height: 72px
+      letter-spacing: 0.72px
+      white-space: nowrap 
+      position: relative
+      text-overflow: ellipsis
+      max-width: 58%
+      overflow: hidden
+      &:hover
+         color: #920000
+   &.main_submenu
+      @media( max-width: 1000px )
+         .main_submenu--list
+            transform: translateX(-50%) translateY(50px)
+            opacity: 0
+            visibility: hidden
+         .main_submenu--subitem
+            transform: rotateX(90deg)
+         &:hover                                 // раскрытие подпунктов меню в PC версии (до 1001px)
+            .main_submenu--list
+               transform: translateX(-50%) translateY(-51%)
+               opacity: 1
+               visibility: visible
+            .main_submenu--subitem
+               transform: rotateX(0)
+               opacity: 1
+               transition-delay: .3s
+               &:nth-child(1)
+                  transition-delay: .05s
+               &:nth-child(2)
+                  transition-delay: .1s
+               &:nth-child(3)
+                  transition-delay: .15s
+               &:nth-child(4)
+                  transition-delay: .2s
+               &:nth-child(5)
+                  transition-delay: .25s
+html * 
+   scrollbar-width: thin
+   scrollbar-color: blue #920000
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar 
+   height: 4px
+   width: 4px
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track 
+   background: #E7E7E7
+   border-radius: 3px
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb 
+   background-color: #920000
+   border-radius: 6px
+#countdown
+   display: flex
+   justify-content: center
+   margin-top: 120px
+   span 
+      font-size: 165px
+      font-size: 165px
+      line-height: 100%
+      color: #000000
+      padding: 0 0px 0 109px
+      letter-spacing: 102.72px
+      min-width: 495px
+.countdown-time
+   font-weight: 600
+   font-size: 15px
+   line-height: 18px
+   color: #E8AE38
+.it__one:nth-child(1) .countdown-number
+   padding-left: 107px
+   &:after 
+      margin: 0
+.it__one:nth-child(2) .countdown-number
+   padding-left: 171px
+   &:after 
+      margin: 0
+.it__one:nth-child(3) .countdown-number
+   padding-left: 107px
+   &:after 
+      margin: 0
+.it__one:last-child .countdown-number
+   margin-right: 0
+   &:after 
+      display: none  
+.countdown-number
+   width: 397px
+   height: 217px
+   background: url(/img/timer1.png) no-repeat center center
+   display: flex
+   align-items: center
+   justify-content: center
+   margin-right: 94px
+   position: relative
+   &:after 
+      content: ""
+      display: block
+      background: url(/img/dots.png) no-repeat center center
+      width: 38px
+      height: 108px
+      flex: 1 0 auto
+      max-width: 38px
+      position: absolute
+      right: -68px
+      top: 53px
+.header 
+   padding: 18px 0
+.nav 
+   &__return 
+      display: none
+   &__items 
+      position: relative
+      top: 9px
+   &__right 
+      position: relative
+      top: 25px
+   &__links 
+      margin-left: 58px
+   &__logo 
+      width: 492px
+      height: 356px
+      object-fit: cover
+   &__wallet 
+      position: absolute
+      left: 41px
+      top: 26px
+      width: 73px
+      height: 87px
+      object-fit: cover
+   &__box 
+      justify-content: space-between
+   &__el 
+      margin-right: 38px
+      width: 140px
+      height: 132px
+      img
+         width: 100%
+         height: 100%
+         object-fit: cover
+   &__btn 
+      width: 335px
+      height: 199px
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      color: #000000
+      font-size: 72px
+      letter-spacing: 0.72px
+      line-height: 72px
+      text-align: center
+      background: url(/img/t1.png) no-repeat center center
+      margin-left: 76px
+      &.active 
+         background: url(/img/t2.png) no-repeat center center
+         width: 375px
+         color: white
+      &.disabled 
+         pointer-events: none
+         span 
+            margin-top: -25px
+            font-size: 55px
+            letter-spacing: 0.3px
+.main 
+   &__fig 
+      width: 577px
+      img 
+         width: 100%
+         height: 100%
+         object-fit: contain
+   &-bottom 
+      justify-content: center
+      margin-top: 131px
+      &__block 
+         width: 257px
+         height: 190px
+         background: url(/img/mint2.png) no-repeat center center
+         display: flex
+         align-items: center
+         justify-content: center
+         margin-left: 85px
+         line-height: 100%
+         font-size: 79px
+         letter-spacing: 0.53px
+         color: white
+      &__text 
+         font-size: 97px
+         color: white
+         letter-spacing: 0.53px
+         line-height: 100%
+      &__mint 
+         width: 589px
+         height: 192px
+         display: flex
+         align-items: center
+         background: url(/img/mint.png) no-repeat center center
+         background-size: 100%
+         padding-left: 102px
+         justify-content: space-between
+   &__title 
+      color: $black
+      font-size: 136px
+      text-align: center
+      line-height: 100%
+      letter-spacing: 0.53px
+      text-transform: uppercase
+      padding-top: 211px
+   &__reload 
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 140px
+      height: 132px
+      margin: 21px auto 0
+      position: relative
+      z-index: 1
+      img 
+         width: 100%
+         height: 100%
+         object-fit: cover
+   &__content
+      position: relative
+      img 
+         position: absolute
+         z-index: -1
+   &__pic
+      position: absolute
+      top: -40rem
+      left: 6%
+      width: 87%
+      z-index: 1
+      height: 100vh
+   &__pic_2
+      top: -17rem
+   &__btn 
+      background: url(/img/enter.svg) no-repeat center center
+      z-index: 1
+      position: relative
+      width: 1349px
+      height: 628px  
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 10% auto 0
+      background-size: 100%
+      padding-left: 10px
+   &__pic2
+      top: -55rem
+      left: -18px
+      z-index: 1
+      &_2 
+         animation-direction: alternate
+         animation-duration: 1s
+         animation-name: light1
+         animation-iteration-count: infinite
+         animation-timing-function: linear
+   &__pic3
+      top: -22rem
+      left: 38rem
+      &_2 
+         animation-direction: alternate
+         animation-duration: 1.5s
+         animation-name: light3
+         animation-iteration-count: infinite
+         animation-timing-function: linear
+   &__pic4
+      top: -54rem
+      right: 43rem
+      &_2 
+         animation-direction: alternate
+         animation-duration: 2s
+         animation-name: light2
+         animation-iteration-count: infinite
+         animation-timing-function: linear
+   &__pic5
+      top: -54rem
+      right: 32px
+      &_2 
+         animation-direction: alternate
+         animation-duration: 0.5s
+         animation-name: light4
+         animation-iteration-count: infinite
+         animation-timing-function: linear
+   &__pic6
+      top: -45rem
+      right: 75rem
+      &_2 
+         top: -342px
+         animation-direction: alternate
+         animation-duration: 2s
+         animation-name: move
+         animation-iteration-count: infinite
+         animation-timing-function: linear
+   &__pic7
+      top: -31rem
+      left: 40rem
+      &_2 
+         top: -106px
+         animation-direction: alternate
+         animation-duration: 2s
+         animation-name: move2
+         animation-iteration-count: infinite
+         animation-timing-function: linear
+   @keyframes move 
+      from 
+         margin-top: 10px
+      to 
+         margin-top: 100px
+   @keyframes move2 
+      from 
+         margin-top: 0
+      to 
+         margin-top: 200px
+   @keyframes move3
+      from 
+         margin-bottom: 0
+      to 
+         margin-bottom: 100px
+   @keyframes move4
+      from 
+         margin-bottom: 0
+      to 
+         margin-bottom: 50px
+   @keyframes light1
+      0%
+         opacity: 0
+      50%
+         opacity: 1
+      70%
+         opacity: 0
+      100% 
+         opacity: 0
+   @keyframes light2
+      0%
+         opacity: 0
+      50%
+         opacity: 1
+      60%
+         opacity: 0
+      100% 
+         opacity: 0
+   @keyframes light3
+      0%
+         opacity: 0
+      50%
+         opacity: 1
+      80%
+         opacity: 0
+      100% 
+         opacity: 0
+   @keyframes light4
+      0%
+         opacity: 0
+      50%
+         opacity: 1
+      90%
+         opacity: 0
+      100% 
+         opacity: 0
+   &__pic8
+      bottom: -43rem
+      left: 5rem
+      &_2 
+         bottom: -1070px
+         animation-direction: alternate
+         animation-duration: 2s
+         animation-name: move3
+         animation-iteration-count: infinite
+         animation-timing-function: linear
+   &__pic9
+      top: -18rem
+      right: 60px
+      &_2 
+         top: 90px
+         animation-direction: alternate
+         animation-duration: 3s
+         animation-name: move
+         animation-iteration-count: infinite
+         animation-timing-function: linear
+   &__pic77
+      right: 120px
+      top: -153px
+      position: absolute
+   &__pic88
+      left: 332px
+      bottom: 63px
+      position: absolute
+      z-index: 1
+      animation-direction: alternate
+      animation-duration: 2s
+      animation-name: move4
+      animation-iteration-count: infinite
+      animation-timing-function: linear
+   &__wrap  
+      margin: -5px auto 200px
+      background: url(/img/bg.png) no-repeat center center
+      background-size: 100%
+      width: 1518px
+      height: 1522px
+      position: relative
+      &_2 
+         background: url(/img/bg2.png) no-repeat center center
+         width: 2704px
+         height: 1518px
+   &__light 
+      position: absolute
+      bottom: 86px
+      left: 140px
+      z-index: 0
+   &__image 
+      position: relative
+      z-index: 1
+      margin: 30px auto 0
+      display: block
+      width: 593px
+      height: 593px
+      object-fit: cover
+   &__tweet
+      background: url(/img/tweet.png) no-repeat center center
+      position: relative
+      width: 386px
+      height: 123px  
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 10px auto 0
+      background-size: 100%
+      color: #ffffff
+      font-size: 72px
+      letter-spacing: 0.53px
+      margin: 53px auto 0
+   &__row
+      width: 77%
+      justify-content: space-between
+      padding-top: 206px
+      margin: 0 auto
+.cloud1 
+   position: absolute
+   left: 0
+   bottom: 0
+   z-index: 2
+.cloud2
+   position: absolute
+   left: 50%
+   bottom: 0
+   width: 1074px
+   margin-left: -640px
+   z-index: 2
+.cloud3 
+   position: absolute
+   right: 0
+   bottom: 0
+   z-index: 2
+.block 
+   position: absolute
+   bottom: 0px
+   right: 0
+   &_pic1 
+      position: relative
+      z-index: 1
+   &_pic2 
+      position: absolute
+      left: -550px
+      top: 54px
+      z-index: 1
+      animation-direction: alternate
+      animation-duration: 1s
+      animation-name: move5
+      animation-iteration-count: infinite
+      animation-timing-function: linear
+@keyframes move5
+   from 
+      top: 54px
+      transform: rotate(0deg)
+   to 
+      top: 0px
+      transform: rotate(10deg)
+@keyframes move68
+   from 
+      top: 20px
+      transform: rotate(0deg)
+   to 
+      top: 0px
+      transform: rotate(10deg)
+.number 
+   align-items: center
+   position: relative
+   .minus 
+      position: absolute
+      right: 43px
+      bottom: -5px
+      width: 35px
+      cursor: pointer
+   .plus
+      position: absolute
+      right: 43px
+      top: -5px
+      width: 35px
+      cursor: pointer
+   input 
+      font-size: 70px
+      color: white
+      letter-spacing: 0.53px
+      background: transparent
+      border: none
+      width: 127px

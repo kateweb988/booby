@@ -1,0 +1,103 @@
+body
+   font-family: 'Candy Beans'
+   font-weight: 400
+   background: url(/img/background.png) no-repeat center center / cover
+   font-size: 14px
+   line-height: 100%
+   color: $black
+   height: 100%
+a
+   text-decoration: none
+   box-sizing: border-box
+   &:hover 
+      color: #920000
+.container
+   padding: 0 35px
+   max-width: 100%
+   margin: 0 auto
+   @media ( max-width: 1199px )
+      max-width: 960px
+      padding: 0 20px
+   @media (max-width: 991px)
+      max-width: 720px
+   @media (max-width: 767px)
+      max-width: 540px
+      padding: 0 10px
+.d-flex
+   display: flex
+.body-wrap
+   overflow: hidden
+   position: relative
+   display: flex
+   flex-direction: column
+   min-height: 100vh
+footer
+   margin-top: auto
+.main__btn
+   color: #ffffff
+   font-size: 317px
+   line-height: 167.55px
+   text-align: center
+   text-transform: uppercase
+   letter-spacing: 0.53px
+   margin: 0
+ul 
+   margin: 0
+   padding: 0
+   list-style-type: none
+p
+   margin: 0
+.svg 
+   transition: 0.5s ease
+a
+   transition: color 0.5s ease
+   box-sizing: border-box
+li
+   a
+      transition: color 0.5s ease
+button
+   cursor: pointer
+   box-sizing: border-box
+textarea
+   transition: border 0.5s
+   box-sizing: border-box
+   &:focus
+      transition: border 0.5s
+      outline: none
+      border: 1px solid #920000 !important
+input
+   transition: border 0.5s
+   box-sizing: border-box
+   border: 1px solid #fff
+   &.disabled
+      pointer-events: none
+   &:focus 
+      border: 1px solid #920000 !important
+      transition: border 0.5s
+   &:focus-visible
+      outline: initial
+path
+   transition: fill 0.5s
+div 
+   box-sizing: border-box
+.icon 
+   transition: fill 0.5s
+.btn 
+   display: flex
+   align-items: center
+   justify-content: center
+   transition: color 0.5s, background 0.5s, border 0.5s, box-shadow 0.5s
+   background: linear-gradient(90deg, #DCAC0F 0%, #FBC963 100%)
+   box-shadow: 0px 8px 25px rgba(240, 187, 15, 0.2)
+   border-radius: 5px
+   width: 299px
+   height: 54px
+   font-weight: 600
+   font-size: 18px
+   line-height: 22px
+   color: #FFFFFF
+   &:hover 
+      -webkit-box-shadow: rgb(220 172 15) 0px 0px 16px 2px
+      -moz-box-shadow: rgb(220 172 15) 0px 0px 16px 2px
+      box-shadow: rgb(220 172 15) 0px 0px 16px 2px
+      color: white
