@@ -292,6 +292,9 @@ html *::-webkit-scrollbar-thumb
 .main 
    &__fig 
       width: 577px
+      transition: filter 0.5s
+      &:hover 
+         filter: drop-shadow(0 0 40px #FFFACD) !important
       img 
          width: 100%
          height: 100%
@@ -405,7 +408,7 @@ html *::-webkit-scrollbar-thumb
       right: 32px
       &_2 
          animation-direction: alternate
-         animation-duration: 0.5s
+         animation-duration: 1.5s
          animation-name: light4
          animation-iteration-count: infinite
          animation-timing-function: linear
@@ -415,7 +418,7 @@ html *::-webkit-scrollbar-thumb
       &_2 
          top: -342px
          animation-direction: alternate
-         animation-duration: 2s
+         animation-duration: 3s
          animation-name: move
          animation-iteration-count: infinite
          animation-timing-function: linear
@@ -425,7 +428,7 @@ html *::-webkit-scrollbar-thumb
       &_2 
          top: -106px
          animation-direction: alternate
-         animation-duration: 2s
+         animation-duration: 3s
          animation-name: move2
          animation-iteration-count: infinite
          animation-timing-function: linear
@@ -448,7 +451,7 @@ html *::-webkit-scrollbar-thumb
       from 
          margin-bottom: 0
       to 
-         margin-bottom: 50px
+         margin-bottom: 80px
    @keyframes light1
       0%
          opacity: 0
@@ -491,7 +494,7 @@ html *::-webkit-scrollbar-thumb
       &_2 
          bottom: -1070px
          animation-direction: alternate
-         animation-duration: 2s
+         animation-duration: 3s
          animation-name: move3
          animation-iteration-count: infinite
          animation-timing-function: linear
@@ -501,14 +504,16 @@ html *::-webkit-scrollbar-thumb
       &_2 
          top: 90px
          animation-direction: alternate
-         animation-duration: 3s
+         animation-duration: 3.5s
          animation-name: move
          animation-iteration-count: infinite
          animation-timing-function: linear
    &__pic77
-      right: 120px
-      top: -153px
+      right: 166px
+      top: -173px
       position: absolute
+      height: 358px
+      width: 360px
    &__pic88
       left: 332px
       bottom: 63px
@@ -632,3 +637,57 @@ html *::-webkit-scrollbar-thumb
       background: transparent
       border: none
       width: 127px
+.pic1 
+   width: 100%
+   height: 100%
+   z-index: 2 !important
+.wing1 
+   position: absolute
+   left: 59px
+   top: 213px
+   animation-direction: alternate
+   animation-duration: 2s
+   animation-name: wing1
+   animation-iteration-count: infinite
+   animation-timing-function: linear
+   z-index: 1 !important
+.wing2
+   position: absolute
+   right: 41px
+   top: 82px
+   animation-direction: alternate
+   animation-duration: 2s
+   animation-name: wing2
+   animation-iteration-count: infinite
+   animation-timing-function: linear
+   z-index: 1 !important
+.arm
+   position: absolute
+   left: 137px
+   top: 200px
+   animation-direction: alternate
+   animation-duration: 1.5s
+   animation-name: arm
+   animation-iteration-count: infinite
+   animation-timing-function: linear
+   z-index: 2 !important
+@keyframes wing1
+   from 
+      margin-top: 0
+      transform: rotate(0deg)
+   to 
+      transform: rotate(-20deg)
+      margin-top: 20px
+@keyframes wing2
+   from 
+      margin-top: 0
+      transform: rotate(0deg)
+   to 
+      transform: rotate(20deg)
+      margin-top: 20px
+@keyframes arm
+   from 
+      transform: rotate(0deg)
+   to 
+      transform: rotate(15deg)
+      left: 130px
