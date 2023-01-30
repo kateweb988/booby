@@ -358,6 +358,9 @@ html *::-webkit-scrollbar-thumb
       margin: 21px auto 0
       position: relative
       z-index: 1
+      transition: filter 0.3s
+      &:hover 
+         filter: hue-rotate(45deg)
       img 
          width: 100%
          height: 100%
@@ -575,6 +578,10 @@ html *::-webkit-scrollbar-thumb
       font-size: 72px
       letter-spacing: 0.53px
       margin: 53px auto 0
+      transition: filter 0.3s
+      &:hover 
+         color: white 
+         filter: hue-rotate(45deg)
    &__row
       width: 77%
       justify-content: space-between
