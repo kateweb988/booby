@@ -29,11 +29,13 @@
       height: 50px
       transform: rotate(0)
       transform-origin: 50% 50% 0
-      transition: transform, stroke
+      transition: transform 0.3s, stroke 0.3s, filter 0.3s
       img 
          width: 100%
          height: 100%
          object-fit: cover
+      &:hover 
+         filter: invert(1)
    &--list
       display: flex
       flex-direction: column
@@ -120,6 +122,7 @@
    background: url(/img/connect.png) no-repeat center center
    width: 640px
    padding-bottom: 6px
+   transition: filter 0.5s
    &--selected
       display: flex
       align-items: center
@@ -184,27 +187,31 @@ html *::-webkit-scrollbar-thumb
    margin-top: 120px
    span 
       font-size: 165px
-      font-size: 165px
       line-height: 100%
       color: #000000
-      padding: 0 0px 0 109px
+      padding: 0 0px 0 0px !important
+      min-width: auto !important
       letter-spacing: 102.72px
-      min-width: 495px
+      position: absolute
+      left: 55px
+      top: 22px
 .countdown-time
    font-weight: 600
    font-size: 15px
    line-height: 18px
    color: #E8AE38
 .it__one:nth-child(1) .countdown-number
-   padding-left: 107px
+   padding-left: 0 !important
    &:after 
       margin: 0
 .it__one:nth-child(2) .countdown-number
-   padding-left: 171px
+   padding-left: 0 !important
+   span 
+      letter-spacing: 152.72px !important
    &:after 
       margin: 0
 .it__one:nth-child(3) .countdown-number
-   padding-left: 107px
+   padding-left: 0 !important
    &:after 
       margin: 0
 .it__one:last-child .countdown-number
@@ -261,6 +268,9 @@ html *::-webkit-scrollbar-thumb
       margin-right: 38px
       width: 140px
       height: 132px
+      transition: 0.5s
+      &:hover 
+         filter: sepia(1)
       img
          width: 100%
          height: 100%
@@ -279,6 +289,9 @@ html *::-webkit-scrollbar-thumb
       text-align: center
       background: url(/img/t1.png) no-repeat center center
       margin-left: 76px
+      transition: filter 0.5s
+      &:hover 
+         filter: hue-rotate(50deg)
       &.active 
          background: url(/img/t2.png) no-repeat center center
          width: 375px
@@ -624,12 +637,18 @@ html *::-webkit-scrollbar-thumb
       bottom: -5px
       width: 35px
       cursor: pointer
+      transition: 0.3s filter
+      &:hover 
+         filter: brightness(0.5)
    .plus
       position: absolute
       right: 43px
       top: -5px
       width: 35px
       cursor: pointer
+      transition: 0.3s filter
+      &:hover 
+         filter: brightness(0.5)
    input 
       font-size: 70px
       color: white

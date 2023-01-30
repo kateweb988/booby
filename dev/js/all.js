@@ -54,7 +54,7 @@ function initializeClock(id, endtime) {
 }
 
 var deadline = "January 30 2023 00:00:00 GMT+0300"; //for Ukraine
-var deadline = new Date(Date.parse(new Date()) + 1 * 1 * 31 * 31 * 1500); // for endless timer
+var deadline = new Date(Date.parse(new Date()) + 1 * 1 * 31 * 31 * 1000); // for endless timer
 initializeClock('countdown', deadline);
 $('.my').change(function () {
   if ($(this).val() != '') $(this).prev().text('Выбрано файлов: ' + $(this)[0].files.length);
