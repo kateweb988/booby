@@ -181,7 +181,7 @@ template {
 body {
   font-family: "Candy Beans";
   font-weight: 400;
-  background: url(/img/background.png) no-repeat center center/cover;
+  background: url(../img/background.png) no-repeat center center/cover;
   font-size: 14px;
   line-height: 100%;
   color: #000000;
@@ -507,7 +507,7 @@ div {
   align-items: center;
   justify-content: center;
   height: 150px;
-  background: url(/img/connect.png) no-repeat center center;
+  background: url(../img/connect.png) no-repeat center center;
   width: 640px;
   padding-bottom: 6px;
   transition: filter 0.5s;
@@ -647,7 +647,7 @@ html *::-webkit-scrollbar-thumb {
 .countdown-number {
   width: 397px;
   height: 217px;
-  background: url(/img/timer1.png) no-repeat center center;
+  background: url(../img/timer1.png) no-repeat center center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -657,7 +657,7 @@ html *::-webkit-scrollbar-thumb {
 .countdown-number:after {
   content: "";
   display: block;
-  background: url(/img/dots.png) no-repeat center center;
+  background: url(../img/dots.png) no-repeat center center;
   width: 38px;
   height: 108px;
   flex: 1 0 auto;
@@ -727,7 +727,7 @@ html *::-webkit-scrollbar-thumb {
   letter-spacing: 0.72px;
   line-height: 72px;
   text-align: center;
-  background: url(/img/t1.png) no-repeat center center;
+  background: url(../img/t1.png) no-repeat center center;
   margin-left: 76px;
   transition: filter 0.5s;
 }
@@ -735,7 +735,7 @@ html *::-webkit-scrollbar-thumb {
   filter: hue-rotate(50deg);
 }
 .nav__btn.active {
-  background: url(/img/t2.png) no-repeat center center;
+  background: url(../img/t2.png) no-repeat center center;
   width: 375px;
   color: white;
 }
@@ -767,7 +767,7 @@ html *::-webkit-scrollbar-thumb {
 .main-bottom__block {
   width: 257px;
   height: 190px;
-  background: url(/img/mint2.png) no-repeat center center;
+  background: url(../img/mint2.png) no-repeat center center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -788,7 +788,7 @@ html *::-webkit-scrollbar-thumb {
   height: 192px;
   display: flex;
   align-items: center;
-  background: url(/img/mint.png) no-repeat center center;
+  background: url(../img/mint.png) no-repeat center center;
   background-size: 100%;
   padding-left: 102px;
   justify-content: space-between;
@@ -840,7 +840,7 @@ html *::-webkit-scrollbar-thumb {
   top: -17rem;
 }
 .main__btn {
-  background: url(/img/enter.svg) no-repeat center center;
+  background: url(../img/enter.svg) no-repeat center center;
   z-index: 1;
   position: relative;
   width: 1349px;
@@ -1053,14 +1053,14 @@ html *::-webkit-scrollbar-thumb {
 }
 .main__wrap {
   margin: -5px auto 200px;
-  background: url(/img/bg.png) no-repeat center center;
+  background: url(../img/bg.png) no-repeat center center;
   background-size: 100%;
   width: 1518px;
   height: 1522px;
   position: relative;
 }
 .main__wrap_2 {
-  background: url(/img/bg2.png) no-repeat center center;
+  background: url(../img/bg2.png) no-repeat center center;
   width: 2704px;
   height: 1518px;
 }
@@ -1080,7 +1080,7 @@ html *::-webkit-scrollbar-thumb {
   object-fit: cover;
 }
 .main__tweet {
-  background: url(/img/tweet.png) no-repeat center center;
+  background: url(../img/tweet.png) no-repeat center center;
   position: relative;
   width: 386px;
   height: 123px;
@@ -2237,7 +2237,7 @@ html *::-webkit-scrollbar-thumb {
   }
   .main__wrap_2 {
     height: auto !important;
-    background: url(/img/bg33.png) no-repeat center center;
+    background: url(../img/bg33.png) no-repeat center center;
     background-size: contain;
     margin: 20px auto 40px;
     padding-bottom: 220px;
